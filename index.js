@@ -1,8 +1,8 @@
 const { Client, GatewayIntentBits, Partials, Collection, REST, Routes } = require("discord.js");
 const config = require("./config.json");
 
-const { LoadEvents } = require("./handlers/eventHandler.js");
 const { LoadCommands } = require("./handlers/commandHandler");
+const { LoadEvents } = require("./handlers/eventHandler.js");
 
 const intents = [
     GatewayIntentBits.AutoModerationConfiguration,
@@ -40,6 +40,6 @@ const client = new Client({ intents: intents, partials: partials });
 client.commands = new Collection();
 
 client.login(config.token).then(() => {
-    LoadEvents(client);
     LoadCommands(client);
+    LoadEvents(client);
 });
