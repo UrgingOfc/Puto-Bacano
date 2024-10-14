@@ -1,0 +1,16 @@
+// Remove this comment when copying to your project.
+// Rename the file to "config.json" and complete the values bellow.
+
+{
+    "token": "YOUR_DISCORD_BOT",
+    "clientId": "YOUR_DISCORD_BOT_CLIENTID",
+    "guildId": "YOUR_DISCORD_GUILD_ID",
+    "gemini": {
+        "apiKey": "YOUR_GEMINI_API_KEY"
+    },
+    "updates": [
+        [
+            "🛠️ Corrigido o problema da inteligência artificial (já podem falar comigo :D)"
+        ]
+    ]
+}
