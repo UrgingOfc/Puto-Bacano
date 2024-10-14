@@ -4,6 +4,9 @@ const config = require("./config.json");
 const { LoadCommands } = require("./handlers/commandHandler");
 const { LoadEvents } = require("./handlers/eventHandler.js");
 
+const { configureGenkit } = require("@genkit-ai/core");
+const { googleAI } = require("@genkit-ai/googleai");
+
 const intents = [
     GatewayIntentBits.AutoModerationConfiguration,
     GatewayIntentBits.DirectMessages,
@@ -38,6 +41,13 @@ const partials = [
 const client = new Client({ intents: intents, partials: partials });
 
 client.commands = new Collection();
+
+configureGenkit({
+    plugins: [googleAI({
+        apiKey: 'AIzaSyA-WIiJ17dm2xlGU9MRGHlvDDfFQ5tKyQc', 
+        apiVersion: 'v1beta' 
+    })]
+});
 
 client.login(config.token).then(() => {
     LoadCommands(client);
