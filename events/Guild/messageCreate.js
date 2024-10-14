@@ -1,4 +1,4 @@
-const { gemini15Flash, gemini15Pro } = require("@genkit-ai/googleai");
+const { gemini15Pro } = require("@genkit-ai/googleai");
 const config = require("../../config.json");
 
 const { generate } = require("@genkit-ai/ai");
