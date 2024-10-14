@@ -44,7 +44,7 @@ client.commands = new Collection();
 
 configureGenkit({
     plugins: [googleAI({
-        apiKey: 'AIzaSyA-WIiJ17dm2xlGU9MRGHlvDDfFQ5tKyQc', 
+        apiKey: config.gemini.apiKey, 
         apiVersion: 'v1beta' 
     })]
 });
