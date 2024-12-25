@@ -21,19 +21,19 @@ module.exports = {
                 dataAniv = new Date(data.getFullYear() + 1, Number(aniversario.mes) - 1, Number(aniversario.dia));
                 embed.addFields({
                     name: `\u200B`,
-                    value: `**<@${aniversario.idDiscord}>**\n${dataAniv.getDate().toString()}/${dataAniv.getMonth().toString()}/${dataAniv.getFullYear().toString()}`,
+                    value: `**<@${aniversario.idDiscord}>**\n${dataAniv.getDate().toString()}/${aniversario.mes}/${dataAniv.getFullYear().toString()}`,
                     inline: true
                 })
             } else if (dataHoje.getTime() == dataAniv.getTime()) {
                 embed.addFields({
                     name: `\u200B`,
-                    value: `🎂 **<@${aniversario.idDiscord}>**\n**ANIVERSÁRIO HOJE** - ${dataAniv.getDate().toString()}/${dataAniv.getMonth().toString()}/${dataAniv.getFullYear().toString()}`,
+                    value: `🎂 **<@${aniversario.idDiscord}>**\n**ANIVERSÁRIO HOJE** - ${dataAniv.getDate().toString()}/${aniversario.mes}/${dataAniv.getFullYear().toString()}`,
                     inline: true
                 })
             } else {
                 embed.addFields({
                     name: `\u200B`,
-                    value: `**<@${aniversario.idDiscord}>**\n${dataAniv.getDate().toString()}/${dataAniv.getMonth().toString()}/${dataAniv.getFullYear().toString()}`,
+                    value: `**<@${aniversario.idDiscord}>**\n${dataAniv.getDate().toString()}/${aniversario.mes}/${dataAniv.getFullYear().toString()}`,
                     inline: true
                 })
             }
